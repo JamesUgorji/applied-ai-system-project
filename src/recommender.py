@@ -44,13 +44,16 @@ class Recommender:
     OOP implementation of the recommendation logic.
     Required by tests/test_recommender.py
     """
-    # ===== FIX #1: Reduced Genre Dominance =====
-    GENRE_MATCH_POINTS = 1.5  # Reduced from 2.0 (was too dominant)
-    GENRE_FUZZY_POINTS = 0.75  # Fuzzy match (e.g., "indie pop" ~= "pop")
-    MOOD_MATCH_POINTS = 1.0
-    MOOD_FUZZY_POINTS = 0.5  # Fuzzy match for semantically similar moods
-    ENERGY_MAX_POINTS = 1.0
-    FEATURE_POINTS = 0.5  # Max points for danceability/valence/acousticness
+    # ===== UPDATED WEIGHTS: Double Energy, Half Genre =====
+    # Original: Genre 1.5, Mood 1.0, Energy 1.0 (max: 3.5)
+    # New:      Genre 0.75, Mood 1.0, Energy 2.0 (max: 3.75)
+    # Importance distribution: Genre 20%, Mood 27%, Energy 53%
+    GENRE_MATCH_POINTS = 0.75      # Halved from 1.5
+    GENRE_FUZZY_POINTS = 0.375     # Halved from 0.75 (fuzzy match)
+    MOOD_MATCH_POINTS = 1.0        # Unchanged
+    MOOD_FUZZY_POINTS = 0.5        # Unchanged (fuzzy match)
+    ENERGY_MAX_POINTS = 2.0        # Doubled from 1.0
+    FEATURE_POINTS = 0.5           # Max points for danceability/valence/acousticness
 
     def __init__(self, songs: List[Song]):
         self.songs = songs
@@ -246,12 +249,13 @@ def recommend_songs(user_prefs: Dict, songs: List[Dict], k: int = 5) -> List[Tup
     Enhanced functional recommendation with fuzzy matching, energy tolerance, and extended features.
     """
     # Constants with reduced genre dominance
-    genre_match_points = 1.5
-    genre_fuzzy_points = 0.75
-    mood_match_points = 1.0
-    mood_fuzzy_points = 0.5
-    energy_max_points = 1.0
-    feature_points = 0.5
+    # ===== UPDATED WEIGHTS: Double Energy, Half Genre =====
+    genre_match_points = 0.75      # Halved from 1.5
+    genre_fuzzy_points = 0.375     # Halved from 0.75
+    mood_match_points = 1.0        # Unchanged
+    mood_fuzzy_points = 0.5        # Unchanged
+    energy_max_points = 2.0        # Doubled from 1.0
+    feature_points = 0.5           # Unchanged
     
     # Extract parameters with defaults
     energy_tolerance = user_prefs.get('energy_tolerance', 0.2)

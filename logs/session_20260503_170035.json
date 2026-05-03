@@ -1,0 +1,48 @@
+{
+  "run_id": "20260503_170035",
+  "timestamp": "2026-05-03T17:00:35.558541",
+  "user_profile": {
+    "favorite_genre": "lofi",
+    "favorite_mood": "focused",
+    "target_energy": 0.5,
+    "likes_acoustic": true,
+    "energy_tolerance": 0.2,
+    "target_danceability": null,
+    "danceability_weight": 0.0,
+    "target_valence": null,
+    "valence_weight": 0.0,
+    "acoustic_weight": 0.0
+  },
+  "recommendations": [
+    {
+      "title": "Lo-Fi Beats",
+      "artist": "Nocow",
+      "score": 2.75,
+      "explanation": "Matches adjusted focused mood"
+    },
+    {
+      "title": "Three Little Birds",
+      "artist": "Bob Marley",
+      "score": 1.98,
+      "explanation": "Matches adjusted focused mood"
+    },
+    {
+      "title": "Layla",
+      "artist": "Derek and the Dominos",
+      "score": 1.98,
+      "explanation": "Matches adjusted focused mood"
+    },
+    {
+      "title": "Shape of You",
+      "artist": "Ed Sheeran",
+      "score": 1.98,
+      "explanation": "Matches adjusted focused mood"
+    },
+    {
+      "title": "Weightless",
+      "artist": "Marconi Union",
+      "score": 1.96,
+      "explanation": "Matches adjusted focused mood"
+    }
+  ]
+}

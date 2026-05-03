@@ -1,0 +1,48 @@
+{
+  "run_id": "20260502_222435",
+  "timestamp": "2026-05-02T22:24:35.926503",
+  "user_profile": {
+    "favorite_genre": "lofi",
+    "favorite_mood": "focused",
+    "target_energy": 0.5,
+    "likes_acoustic": true,
+    "energy_tolerance": 0.2,
+    "target_danceability": null,
+    "danceability_weight": 0.0,
+    "target_valence": null,
+    "valence_weight": 0.0,
+    "acoustic_weight": 0.0
+  },
+  "recommendations": [
+    {
+      "title": "Focus Flow",
+      "artist": "LoRoom",
+      "score": 2.75,
+      "explanation": "Matches adjusted focused mood"
+    },
+    {
+      "title": "Spacewalk Thoughts",
+      "artist": "Orbit Bloom",
+      "score": 1.96,
+      "explanation": "Matches adjusted focused mood"
+    },
+    {
+      "title": "Midnight Coding",
+      "artist": "LoRoom",
+      "score": 1.9499999999999997,
+      "explanation": "Matches adjusted focused mood"
+    },
+    {
+      "title": "Night Drive Loop",
+      "artist": "Neon Echo",
+      "score": 1.9,
+      "explanation": "Matches adjusted focused mood"
+    },
+    {
+      "title": "Starlight Serenade",
+      "artist": "Romantic Strings",
+      "score": 1.9,
+      "explanation": "Matches adjusted focused mood"
+    }
+  ]
+}

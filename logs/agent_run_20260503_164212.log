@@ -1,0 +1,29 @@
+2026-05-03 16:42:12,081 - recommender_agent - INFO - Logging initialized for run: 20260503_164212
+2026-05-03 16:42:12,082 - recommender_agent - INFO - Agent initialized with 80 songs
+2026-05-03 16:42:12,082 - recommender_agent - INFO - Starting interactive recommendation workflow
+2026-05-03 16:42:25,210 - recommender_agent - INFO - User selected genre: jazz
+2026-05-03 16:42:30,076 - recommender_agent - INFO - User selected mood: relaxed
+2026-05-03 16:42:39,551 - recommender_agent - INFO - User selected energy: 0.15
+2026-05-03 16:42:43,622 - recommender_agent - INFO - User likes acoustic: True
+2026-05-03 16:42:43,623 - recommender_agent - INFO - User profile created: UserProfile(favorite_genre='jazz', favorite_mood='relaxed', target_energy=0.15, likes_acoustic=True, energy_tolerance=0.2, target_danceability=None, danceability_weight=0.0, target_valence=None, valence_weight=0.0, acoustic_weight=0.0)
+2026-05-03 16:42:43,623 - recommender_agent - INFO - Generating 5 recommendations for user
+2026-05-03 16:42:43,626 - recommender_agent - INFO - Generated 5 recommendations
+2026-05-03 16:42:43,626 - recommender_agent - INFO - Starting refinement loop
+2026-05-03 16:48:16,795 - recommender_agent - INFO - User finished refinement
+2026-05-03 16:48:16,796 - recommender_agent - INFO - Exporting results
+2026-05-03 16:48:16,798 - recommender_agent - INFO - Session data saved to logs/session_20260503_164212.json
+2026-05-03 16:48:16,798 - recommender_agent - INFO - Agent workflow completed successfully
+2026-05-03 16:48:21,816 - recommender_agent - INFO - Agent initialized with 81 songs
+2026-05-03 16:48:21,817 - recommender_agent - INFO - Starting interactive recommendation workflow
+2026-05-03 16:48:25,693 - recommender_agent - INFO - User selected genre: jazz
+2026-05-03 16:48:29,235 - recommender_agent - INFO - User selected mood: chill
+2026-05-03 16:48:31,033 - recommender_agent - INFO - User selected energy: 0.15
+2026-05-03 16:48:33,425 - recommender_agent - INFO - User likes acoustic: True
+2026-05-03 16:48:33,426 - recommender_agent - INFO - User profile created: UserProfile(favorite_genre='jazz', favorite_mood='chill', target_energy=0.15, likes_acoustic=True, energy_tolerance=0.2, target_danceability=None, danceability_weight=0.0, target_valence=None, valence_weight=0.0, acoustic_weight=0.0)
+2026-05-03 16:48:33,426 - recommender_agent - INFO - Generating 5 recommendations for user
+2026-05-03 16:48:33,430 - recommender_agent - INFO - Generated 5 recommendations
+2026-05-03 16:48:33,430 - recommender_agent - INFO - Starting refinement loop
+2026-05-03 17:08:00,859 - recommender_agent - INFO - User finished refinement
+2026-05-03 17:08:00,864 - recommender_agent - INFO - Exporting results
+2026-05-03 17:08:00,868 - recommender_agent - INFO - Session data saved to logs/session_20260503_164212.json
+2026-05-03 17:08:00,868 - recommender_agent - INFO - Agent workflow completed successfully

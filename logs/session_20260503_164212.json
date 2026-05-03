@@ -1,0 +1,48 @@
+{
+  "run_id": "20260503_164212",
+  "timestamp": "2026-05-03T17:08:00.865487",
+  "user_profile": {
+    "favorite_genre": "jazz",
+    "favorite_mood": "chill",
+    "target_energy": 0.15,
+    "likes_acoustic": true,
+    "energy_tolerance": 0.2,
+    "target_danceability": null,
+    "danceability_weight": 0.0,
+    "target_valence": null,
+    "valence_weight": 0.0,
+    "acoustic_weight": 0.0
+  },
+  "recommendations": [
+    {
+      "title": "Lofi Hip Hop",
+      "artist": "Joji",
+      "score": 2.86,
+      "explanation": "has that chill vibe and features acoustic elements"
+    },
+    {
+      "title": "Nuages",
+      "artist": "Django Reinhardt",
+      "score": 2.73,
+      "explanation": "matches your jazz preference and features acoustic elements"
+    },
+    {
+      "title": "Autumn Leaves",
+      "artist": "Ed Sheeran",
+      "score": 2.71,
+      "explanation": "matches your jazz preference and features acoustic elements"
+    },
+    {
+      "title": "So What",
+      "artist": "Miles Davis",
+      "score": 2.49,
+      "explanation": "matches your jazz preference and features acoustic elements"
+    },
+    {
+      "title": "Take Five",
+      "artist": "Dave Brubeck",
+      "score": 2.41,
+      "explanation": "matches your jazz preference and features acoustic elements"
+    }
+  ]
+}

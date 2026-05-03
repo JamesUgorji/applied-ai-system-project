@@ -1,0 +1,4 @@
+2026-05-02 22:17:40,352 - recommender_agent - INFO - Logging initialized for run: 20260502_221740
+2026-05-02 22:17:40,352 - recommender_agent - INFO - Starting demo workflow
+2026-05-02 22:17:40,353 - recommender_agent - INFO - Loaded 20 songs
+2026-05-02 22:17:40,353 - recommender_agent - INFO - Created user profile: UserProfile(favorite_genre='lofi', favorite_mood='focused', target_energy=0.4, likes_acoustic=True, energy_tolerance=0.2, target_danceability=None, danceability_weight=0.0, target_valence=None, valence_weight=0.0, acoustic_weight=0.0)

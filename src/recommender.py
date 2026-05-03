@@ -133,6 +133,72 @@ class Recommender:
         
         return score
 
+    def calculate_confidence(self, user: UserProfile, song: Song) -> float:
+        """
+        Calculate how confident the recommender is about this recommendation.
+        
+        Confidence is based on how well the song matches across multiple dimensions:
+        - Exact matches boost confidence
+        - Fuzzy matches lower confidence slightly
+        - No matches lower confidence
+        
+        Returns float 0-1 where:
+        - 1.0 = Very confident (perfect match on all dimensions)
+        - 0.5 = Moderate confidence (mixed matches)
+        - 0.0 = No confidence (no matches)
+        
+        Args:
+            user: UserProfile with preferences
+            song: Song to evaluate
+        
+        Returns:
+            float: Confidence score (0-1)
+        """
+        confidence_factors = []
+        
+        # Genre matching confidence
+        genre_match, _ = self._fuzzy_match(user.favorite_genre, song.genre)
+        if genre_match == 1.0:
+            confidence_factors.append(1.0)  # Exact match
+        elif genre_match == 0.5:
+            confidence_factors.append(0.6)  # Fuzzy match
+        else:
+            confidence_factors.append(0.0)  # No match
+        
+        # Mood matching confidence
+        mood_match, _ = self._fuzzy_match(user.favorite_mood, song.mood)
+        if mood_match == 1.0:
+            confidence_factors.append(1.0)
+        elif mood_match == 0.5:
+            confidence_factors.append(0.6)
+        else:
+            confidence_factors.append(0.0)
+        
+        # Energy matching confidence (within tolerance = confident)
+        energy_distance = abs(song.energy - user.target_energy)
+        if energy_distance <= user.energy_tolerance:
+            confidence_factors.append(1.0)  # Within tolerance = confident
+        elif energy_distance <= user.energy_tolerance * 2:
+            confidence_factors.append(0.5)  # Moderately close
+        else:
+            confidence_factors.append(0.2)  # Far from target
+        
+        # Acoustic preference confidence
+        if user.likes_acoustic:
+            if song.acousticness > 0.6:
+                confidence_factors.append(1.0)  # Acoustic
+            elif song.acousticness > 0.3:
+                confidence_factors.append(0.5)  # Somewhat acoustic
+            else:
+                confidence_factors.append(0.0)  # Not acoustic
+        else:
+            # User doesn't care about acoustic
+            confidence_factors.append(0.8)  # High confidence regardless
+        
+        # Average confidence across all factors
+        avg_confidence = sum(confidence_factors) / len(confidence_factors) if confidence_factors else 0.0
+        return round(avg_confidence, 2)
+
     def recommend(self, user: UserProfile, k: int = 5) -> List[Song]:
         """
         Recommend top-k songs for a user using the point-weighting strategy.
